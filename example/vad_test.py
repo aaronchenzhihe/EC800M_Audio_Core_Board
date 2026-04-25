@@ -69,7 +69,6 @@ def main():
     audio_manager.open_opus()
     audio_manager.start_vad()
     print("开始VAD测试，按Ctrl+C退出")
-    x=2
     try:
         while True:
             audio_manager.opus_read()
