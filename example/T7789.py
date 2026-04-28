@@ -1,4 +1,5 @@
-from machine import LCD 
+from machine import LCD
+from machine import Pin
 
 # 根据LCD商家给出的相应的初始化示例来填写
 # 第一行：2, 0, 120,		2表示sleep命令,中间恒为0,120表示sleep的毫秒数。收到此行数据,LCD将sleep 120ms
@@ -115,7 +116,7 @@ invalid_data = (
     1, 1, YEND_L,
     0, 0, 0x2c,
 )
-
+blk=Pin(Pin.GPIO37,Pin.OUT,Pin.PULL_DISABLE,1)
 lcd = LCD()
 init_list = bytearray(init_data)
 display_on_list = bytearray(display_on_data)
