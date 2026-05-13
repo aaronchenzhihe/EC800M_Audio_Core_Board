@@ -23,7 +23,7 @@ def stream_rec_cb(para):
     global buf
     # print("para:", para)
     if(para[0] == 'stream'):
-        if(para[2] == 0):
+        if(para[2] == 1):
             read_buf = bytearray(para[1])
             rec.stream_read(read_buf,para[1])
             buf += read_buf
